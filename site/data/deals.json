@@ -1,6 +1,6 @@
 {
   "source": "LowEndTalk Offers + LowEndBox",
-  "generated_at": "2026-11-11T06:27:47+00:00",
+  "generated_at": "2026-11-11T06:45:42+00:00",
   "count": 84,
   "by_source": {
     "let": 76,
@@ -8,6 +8,184 @@
   },
   "deduped": 1,
   "records": [
+    {
+      "thread_id": "222164",
+      "source": "let",
+      "provider": "HostDZire",
+      "title": "[Early Black Friday Sale] VPS & Dedicated Server Deals | Starting at Just €18/Year!",
+      "url": "https://lowendtalk.com/discussion/222164/early-black-friday-sale-vps-dedicated-server-deals-starting-at-just-18-year",
+      "vendor_url": "https://hostdzire.com/billing/cart.php?a=add&pid=1261&currency=1&billingcycle=annually",
+      "author": "HostDZire",
+      "posted": "Fri, 16 Oct 2026 18:31:59 +0000",
+      "age_days": 25,
+      "age_status": "ACTIVE",
+      "availability": "UNVERIFIED",
+      "replies": {
+        "reply_count": 57,
+        "vendor_reply_count": 1,
+        "status": null,
+        "source": null,
+        "evidence": null,
+        "vendor_signals": [],
+        "fetched_at": "2026-11-11T06:44:27+00:00"
+      },
+      "event_type": "black_friday",
+      "discount": {
+        "strength": "",
+        "percent_max": null,
+        "recurring": false,
+        "codes": [],
+        "extras": []
+      },
+      "specs": {
+        "vcpu": 12,
+        "ram_gb": 128.0,
+        "storage_gb": 8192.0,
+        "storage_type": "SATA",
+        "bandwidth_tb": 16.0
+      },
+      "specs_all": {
+        "vcpu": [
+          12,
+          8,
+          6,
+          4,
+          2,
+          1
+        ],
+        "ram_gb": [
+          128.0,
+          32.0,
+          24.0,
+          12.0,
+          8.0,
+          6.0,
+          4.0,
+          3.0
+        ],
+        "storage_gb": [
+          8192.0,
+          8192.0,
+          8192.0,
+          6144.0,
+          4096.0,
+          4096.0,
+          4096.0,
+          2048.0
+        ]
+      },
+      "plans": [],
+      "flagship_price": null,
+      "cpu_models": [],
+      "prices": [
+        {
+          "amount": 18.0,
+          "currency": "€",
+          "cycle": "year"
+        },
+        {
+          "amount": 21.0,
+          "currency": "€",
+          "cycle": "year"
+        },
+        {
+          "amount": 29.0,
+          "currency": "€",
+          "cycle": "year"
+        },
+        {
+          "amount": 30.0,
+          "currency": "€",
+          "cycle": "year"
+        }
+      ],
+      "locations": [],
+      "stock_hints": [],
+      "confidence": 0.67,
+      "score": 32,
+      "annual_eur": 18.0,
+      "forum_url": "https://lowseek.ai/d/1376"
+    },
+    {
+      "thread_id": "222865",
+      "source": "let",
+      "provider": "purevoltage.com",
+      "title": "[PureVoltage] Pre-Black Friday ϟ NYC Dedicated from $60/mo ϟ FREE Double Bandwidth + Giveaways!",
+      "url": "https://lowendtalk.com/discussion/222865/purevoltage-pre-black-friday-%CF%9F-nyc-dedicated-from-60-mo-%CF%9F-free-double-bandwidth-giveaways",
+      "vendor_url": "https://purevoltage.com/black-friday-sale",
+      "author": "PureVoltage",
+      "posted": "Mon, 02 Nov 2026 04:29:06 +0000",
+      "age_days": 9,
+      "age_status": "ACTIVE",
+      "availability": "SOLD_OUT",
+      "replies": {
+        "reply_count": 40,
+        "vendor_reply_count": 1,
+        "status": null,
+        "source": null,
+        "evidence": null,
+        "vendor_signals": [],
+        "fetched_at": "2026-11-11T06:44:28+00:00"
+      },
+      "event_type": "black_friday",
+      "discount": {
+        "strength": "double bandwidth",
+        "percent_max": null,
+        "recurring": false,
+        "codes": [],
+        "extras": [
+          "double bandwidth"
+        ]
+      },
+      "specs": {
+        "vcpu": null,
+        "ram_gb": null,
+        "storage_gb": 1024.0,
+        "storage_type": "SSD",
+        "bandwidth_tb": 100.0
+      },
+      "specs_all": {
+        "vcpu": [],
+        "ram_gb": [],
+        "storage_gb": [
+          1024.0,
+          1024.0,
+          1024.0
+        ]
+      },
+      "plans": [],
+      "flagship_price": null,
+      "cpu_models": [
+        "Ryzen 9 9950X",
+        "Xeon E5-2670v3",
+        "Xeon E5-2699v3"
+      ],
+      "prices": [
+        {
+          "amount": 60.0,
+          "currency": "$",
+          "cycle": "month"
+        },
+        {
+          "amount": 70.0,
+          "currency": "$",
+          "cycle": "month"
+        },
+        {
+          "amount": 200.0,
+          "currency": "$",
+          "cycle": "month"
+        }
+      ],
+      "locations": [],
+      "stock_hints": [
+        "out of stock"
+      ],
+      "confidence": 0.67,
+      "score": 42,
+      "annual_eur": 662.4,
+      "forum_url": "https://lowseek.ai/d/1918"
+    },
     {
       "thread_id": "223148",
       "source": "let",
@@ -21,13 +199,13 @@
       "age_status": "NEW",
       "availability": "UNVERIFIED",
       "replies": {
-        "reply_count": 38,
+        "reply_count": 39,
         "vendor_reply_count": 1,
         "status": null,
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:17+00:00"
+        "fetched_at": "2026-11-11T06:44:28+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -110,86 +288,6 @@
       "forum_url": "https://lowseek.ai/d/2076"
     },
     {
-      "thread_id": "222865",
-      "source": "let",
-      "provider": "purevoltage.com",
-      "title": "[PureVoltage] Pre-Black Friday ϟ NYC Dedicated from $60/mo ϟ FREE Double Bandwidth + Giveaways!",
-      "url": "https://lowendtalk.com/discussion/222865/purevoltage-pre-black-friday-%CF%9F-nyc-dedicated-from-60-mo-%CF%9F-free-double-bandwidth-giveaways",
-      "vendor_url": "https://purevoltage.com/black-friday-sale",
-      "author": "PureVoltage",
-      "posted": "Mon, 02 Nov 2026 04:29:06 +0000",
-      "age_days": 9,
-      "age_status": "ACTIVE",
-      "availability": "SOLD_OUT",
-      "replies": {
-        "reply_count": 38,
-        "vendor_reply_count": 1,
-        "status": null,
-        "source": null,
-        "evidence": null,
-        "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:19+00:00"
-      },
-      "event_type": "black_friday",
-      "discount": {
-        "strength": "double bandwidth",
-        "percent_max": null,
-        "recurring": false,
-        "codes": [],
-        "extras": [
-          "double bandwidth"
-        ]
-      },
-      "specs": {
-        "vcpu": null,
-        "ram_gb": null,
-        "storage_gb": 1024.0,
-        "storage_type": "SSD",
-        "bandwidth_tb": 100.0
-      },
-      "specs_all": {
-        "vcpu": [],
-        "ram_gb": [],
-        "storage_gb": [
-          1024.0,
-          1024.0,
-          1024.0
-        ]
-      },
-      "plans": [],
-      "flagship_price": null,
-      "cpu_models": [
-        "Ryzen 9 9950X",
-        "Xeon E5-2670v3",
-        "Xeon E5-2699v3"
-      ],
-      "prices": [
-        {
-          "amount": 60.0,
-          "currency": "$",
-          "cycle": "month"
-        },
-        {
-          "amount": 70.0,
-          "currency": "$",
-          "cycle": "month"
-        },
-        {
-          "amount": 200.0,
-          "currency": "$",
-          "cycle": "month"
-        }
-      ],
-      "locations": [],
-      "stock_hints": [
-        "out of stock"
-      ],
-      "confidence": 0.67,
-      "score": 42,
-      "annual_eur": 662.4,
-      "forum_url": "https://lowseek.ai/d/1918"
-    },
-    {
       "thread_id": "223162",
       "source": "let",
       "provider": "EnderHost",
@@ -208,7 +306,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:21+00:00"
+        "fetched_at": "2026-11-11T06:44:29+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -253,7 +351,7 @@
       "confidence": 0.83,
       "score": 43,
       "annual_eur": 10.22,
-      "forum_url": null
+      "forum_url": "https://lowseek.ai/d/2090"
     },
     {
       "thread_id": "222168",
@@ -283,7 +381,7 @@
           "offset": 73
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:24+00:00"
+        "fetched_at": "2026-11-11T06:44:33+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -383,7 +481,7 @@
             "offset": 27
           }
         ],
-        "fetched_at": "2026-11-11T06:26:27+00:00"
+        "fetched_at": "2026-11-11T06:44:35+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -437,104 +535,6 @@
       "forum_url": null
     },
     {
-      "thread_id": "222164",
-      "source": "let",
-      "provider": "HostDZire",
-      "title": "[Early Black Friday Sale] VPS & Dedicated Server Deals | Starting at Just €18/Year!",
-      "url": "https://lowendtalk.com/discussion/222164/early-black-friday-sale-vps-dedicated-server-deals-starting-at-just-18-year",
-      "vendor_url": "https://hostdzire.com/billing/cart.php?a=add&pid=1261&currency=1&billingcycle=annually",
-      "author": "HostDZire",
-      "posted": "Fri, 16 Oct 2026 18:31:59 +0000",
-      "age_days": 25,
-      "age_status": "ACTIVE",
-      "availability": "UNVERIFIED",
-      "replies": {
-        "reply_count": 56,
-        "vendor_reply_count": 1,
-        "status": null,
-        "source": null,
-        "evidence": null,
-        "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:28+00:00"
-      },
-      "event_type": "black_friday",
-      "discount": {
-        "strength": "",
-        "percent_max": null,
-        "recurring": false,
-        "codes": [],
-        "extras": []
-      },
-      "specs": {
-        "vcpu": 12,
-        "ram_gb": 128.0,
-        "storage_gb": 8192.0,
-        "storage_type": "SATA",
-        "bandwidth_tb": 16.0
-      },
-      "specs_all": {
-        "vcpu": [
-          12,
-          8,
-          6,
-          4,
-          2,
-          1
-        ],
-        "ram_gb": [
-          128.0,
-          32.0,
-          24.0,
-          12.0,
-          8.0,
-          6.0,
-          4.0,
-          3.0
-        ],
-        "storage_gb": [
-          8192.0,
-          8192.0,
-          8192.0,
-          6144.0,
-          4096.0,
-          4096.0,
-          4096.0,
-          2048.0
-        ]
-      },
-      "plans": [],
-      "flagship_price": null,
-      "cpu_models": [],
-      "prices": [
-        {
-          "amount": 18.0,
-          "currency": "€",
-          "cycle": "year"
-        },
-        {
-          "amount": 21.0,
-          "currency": "€",
-          "cycle": "year"
-        },
-        {
-          "amount": 29.0,
-          "currency": "€",
-          "cycle": "year"
-        },
-        {
-          "amount": 30.0,
-          "currency": "€",
-          "cycle": "year"
-        }
-      ],
-      "locations": [],
-      "stock_hints": [],
-      "confidence": 0.67,
-      "score": 32,
-      "annual_eur": 18.0,
-      "forum_url": "https://lowseek.ai/d/1376"
-    },
-    {
       "thread_id": "223062",
       "source": "let",
       "provider": "NetDynamics24",
@@ -573,7 +573,7 @@
             "offset": 28
           }
         ],
-        "fetched_at": "2026-11-11T06:26:29+00:00"
+        "fetched_at": "2026-11-11T06:44:36+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -665,7 +665,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:30+00:00"
+        "fetched_at": "2026-11-11T06:44:37+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -730,7 +730,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:32+00:00"
+        "fetched_at": "2026-11-11T06:44:38+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -812,7 +812,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:33+00:00"
+        "fetched_at": "2026-11-11T06:44:39+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -899,7 +899,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:36+00:00"
+        "fetched_at": "2026-11-11T06:44:42+00:00"
       },
       "event_type": "anniversary",
       "discount": {
@@ -1003,7 +1003,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:37+00:00"
+        "fetched_at": "2026-11-11T06:44:43+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -1075,7 +1075,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:38+00:00"
+        "fetched_at": "2026-11-11T06:44:44+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -1170,7 +1170,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:40+00:00"
+        "fetched_at": "2026-11-11T06:44:45+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -1237,7 +1237,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:40+00:00"
+        "fetched_at": "2026-11-11T06:44:45+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -1301,7 +1301,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:41+00:00"
+        "fetched_at": "2026-11-11T06:44:46+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -1401,7 +1401,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:42+00:00"
+        "fetched_at": "2026-11-11T06:44:47+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -1485,7 +1485,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:42+00:00"
+        "fetched_at": "2026-11-11T06:44:47+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -1570,7 +1570,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:43+00:00"
+        "fetched_at": "2026-11-11T06:44:48+00:00"
       },
       "event_type": "restock",
       "discount": {
@@ -1669,7 +1669,7 @@
           "offset": 37
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:44+00:00"
+        "fetched_at": "2026-11-11T06:44:48+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -1747,7 +1747,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:45+00:00"
+        "fetched_at": "2026-11-11T06:44:49+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -1836,7 +1836,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:46+00:00"
+        "fetched_at": "2026-11-11T06:44:50+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -1916,7 +1916,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:47+00:00"
+        "fetched_at": "2026-11-11T06:44:51+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -2005,7 +2005,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:48+00:00"
+        "fetched_at": "2026-11-11T06:44:52+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -2096,7 +2096,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:50+00:00"
+        "fetched_at": "2026-11-11T06:44:53+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -2154,7 +2154,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:51+00:00"
+        "fetched_at": "2026-11-11T06:44:54+00:00"
       },
       "event_type": "anniversary",
       "discount": {
@@ -2220,7 +2220,7 @@
           "offset": 5
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:51+00:00"
+        "fetched_at": "2026-11-11T06:44:54+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -2305,7 +2305,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:51+00:00"
+        "fetched_at": "2026-11-11T06:44:54+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -2368,7 +2368,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:51+00:00"
+        "fetched_at": "2026-11-11T06:44:55+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -2441,7 +2441,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:52+00:00"
+        "fetched_at": "2026-11-11T06:44:55+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -2538,7 +2538,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:52+00:00"
+        "fetched_at": "2026-11-11T06:44:55+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -2614,7 +2614,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:55+00:00"
+        "fetched_at": "2026-11-11T06:44:57+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -2679,7 +2679,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:55+00:00"
+        "fetched_at": "2026-11-11T06:44:57+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -2789,7 +2789,7 @@
             "offset": 12
           }
         ],
-        "fetched_at": "2026-11-11T06:26:56+00:00"
+        "fetched_at": "2026-11-11T06:44:58+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -2884,7 +2884,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:59+00:00"
+        "fetched_at": "2026-11-11T06:45:01+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -2963,7 +2963,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:00+00:00"
+        "fetched_at": "2026-11-11T06:45:02+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -3043,7 +3043,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:00+00:00"
+        "fetched_at": "2026-11-11T06:45:02+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -3127,7 +3127,7 @@
           "offset": 110
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:02+00:00"
+        "fetched_at": "2026-11-11T06:45:03+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -3228,7 +3228,7 @@
             "offset": 24
           }
         ],
-        "fetched_at": "2026-11-11T06:27:03+00:00"
+        "fetched_at": "2026-11-11T06:45:04+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -3335,7 +3335,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:04+00:00"
+        "fetched_at": "2026-11-11T06:45:05+00:00"
       },
       "event_type": "restock",
       "discount": {
@@ -3405,7 +3405,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:05+00:00"
+        "fetched_at": "2026-11-11T06:45:06+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -3477,7 +3477,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:06+00:00"
+        "fetched_at": "2026-11-11T06:45:07+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -3562,7 +3562,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:07+00:00"
+        "fetched_at": "2026-11-11T06:45:08+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -3641,7 +3641,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:08+00:00"
+        "fetched_at": "2026-11-11T06:45:09+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -3778,7 +3778,7 @@
             "offset": 0
           }
         ],
-        "fetched_at": "2026-11-11T06:27:10+00:00"
+        "fetched_at": "2026-11-11T06:45:10+00:00"
       },
       "event_type": "anniversary",
       "discount": {
@@ -4067,7 +4067,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:10+00:00"
+        "fetched_at": "2026-11-11T06:45:10+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -4127,7 +4127,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:10+00:00"
+        "fetched_at": "2026-11-11T06:45:10+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -4191,7 +4191,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:11+00:00"
+        "fetched_at": "2026-11-11T06:45:11+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -4275,7 +4275,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:15+00:00"
+        "fetched_at": "2026-11-11T06:45:15+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -4371,7 +4371,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:19+00:00"
+        "fetched_at": "2026-11-11T06:45:18+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -4448,7 +4448,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:20+00:00"
+        "fetched_at": "2026-11-11T06:45:18+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -4539,7 +4539,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:20+00:00"
+        "fetched_at": "2026-11-11T06:45:19+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -4628,7 +4628,7 @@
           "offset": 14
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:21+00:00"
+        "fetched_at": "2026-11-11T06:45:20+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -4702,7 +4702,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:27+00:00"
+        "fetched_at": "2026-11-11T06:45:25+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -4783,7 +4783,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:28+00:00"
+        "fetched_at": "2026-11-11T06:45:26+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -4856,7 +4856,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:29+00:00"
+        "fetched_at": "2026-11-11T06:45:27+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -4924,7 +4924,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:30+00:00"
+        "fetched_at": "2026-11-11T06:45:27+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5014,7 +5014,7 @@
             "offset": 18
           }
         ],
-        "fetched_at": "2026-11-11T06:27:30+00:00"
+        "fetched_at": "2026-11-11T06:45:27+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5150,7 +5150,7 @@
             "offset": 33
           }
         ],
-        "fetched_at": "2026-11-11T06:27:30+00:00"
+        "fetched_at": "2026-11-11T06:45:27+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5237,7 +5237,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:30+00:00"
+        "fetched_at": "2026-11-11T06:45:27+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -5315,7 +5315,7 @@
           "offset": 0
         },
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:32+00:00"
+        "fetched_at": "2026-11-11T06:45:29+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5409,7 +5409,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:32+00:00"
+        "fetched_at": "2026-11-11T06:45:29+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -5486,7 +5486,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:32+00:00"
+        "fetched_at": "2026-11-11T06:45:29+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5550,7 +5550,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:34+00:00"
+        "fetched_at": "2026-11-11T06:45:30+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -5612,7 +5612,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:34+00:00"
+        "fetched_at": "2026-11-11T06:45:30+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5687,7 +5687,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:34+00:00"
+        "fetched_at": "2026-11-11T06:45:30+00:00"
       },
       "event_type": "regular",
       "discount": {
@@ -5777,7 +5777,7 @@
             "offset": 11
           }
         ],
-        "fetched_at": "2026-11-11T06:27:35+00:00"
+        "fetched_at": "2026-11-11T06:45:31+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -5877,7 +5877,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:37+00:00"
+        "fetched_at": "2026-11-11T06:45:33+00:00"
       },
       "event_type": "holiday",
       "discount": {
@@ -5954,7 +5954,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:38+00:00"
+        "fetched_at": "2026-11-11T06:45:34+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -6044,7 +6044,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:41+00:00"
+        "fetched_at": "2026-11-11T06:45:36+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -6136,7 +6136,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:44+00:00"
+        "fetched_at": "2026-11-11T06:45:39+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -6196,7 +6196,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:46+00:00"
+        "fetched_at": "2026-11-11T06:45:41+00:00"
       },
       "event_type": "launch",
       "discount": {
@@ -6288,7 +6288,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:47+00:00"
+        "fetched_at": "2026-11-11T06:45:42+00:00"
       },
       "event_type": "sale",
       "discount": {
@@ -6884,13 +6884,13 @@
       "age_status": "ACTIVE",
       "availability": "UNVERIFIED",
       "replies": {
-        "reply_count": 57,
+        "reply_count": 58,
         "vendor_reply_count": 0,
         "status": null,
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:21+00:00"
+        "fetched_at": "2026-11-11T06:44:29+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -6945,7 +6945,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:26:58+00:00"
+        "fetched_at": "2026-11-11T06:45:00+00:00"
       },
       "event_type": "black_friday",
       "discount": {
@@ -6999,7 +6999,7 @@
         "source": null,
         "evidence": null,
         "vendor_signals": [],
-        "fetched_at": "2026-11-11T06:27:27+00:00"
+        "fetched_at": "2026-11-11T06:45:25+00:00"
       },
       "event_type": "sale",
       "discount": {
