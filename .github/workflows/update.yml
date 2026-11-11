@@ -1,31 +1,28 @@
 name: Update deals
 
-# 定时抓取 → 生成站点 → 提交回仓库 →（可选）推送到自有服务器
+# 瀹氭椂鎶撳彇 鈫?鐢熸垚绔欑偣 鈫?鎻愪氦鍥炰粨搴?鈫?閮ㄧ讲鍒?GitHub Pages
 #
-# 为什么用 GitHub Actions 抓取而不是自有服务器：
-#   Actions 每次运行都是**不同的云 IP**，可避开 Cloudflare 对固定 IP 的拦截；
-#   而站点仍可发布到自己的域名与服务器。
-
+# 鏈枃浠跺熀浜庡師鐗?update.yml 淇敼锛氭柊澧?GitHub Pages 鑷姩閮ㄧ讲锛堟湯灏句袱姝ワ級锛?# 骞跺湪 permissions 涓?job environment 涓ˉ鍏?Pages 鎵€闇€鏉冮檺銆?# 鍓嶇疆鏉′欢锛堢綉椤典笂涓€娆℃€ц缃級锛?#   浠撳簱 Settings 鈫?Pages 鈫?Build and deployment 鈫?Source 閫夈€孏itHub Actions銆?
 on:
   schedule:
-    # 每 6 小时一次（UTC）。GitHub 的 cron 在高负载时可能延后几分钟，属正常。
-    - cron: '17 */6 * * *'
+    # 姣?6 灏忔椂涓€娆★紙UTC锛夈€侴itHub 鐨?cron 鍦ㄩ珮璐熻浇鏃跺彲鑳藉欢鍚庡嚑鍒嗛挓锛屽睘姝ｅ父銆?    - cron: '17 */6 * * *'
   workflow_dispatch:
     inputs:
       with_replies:
-        description: '抓取回帖（库存更准，耗时更长）'
+        description: '鎶撳彇鍥炲笘锛堝簱瀛樻洿鍑嗭紝鑰楁椂鏇撮暱锛?
         type: boolean
         default: true
       recent_days:
-        description: '只保留最近 N 天（0=全部）'
+        description: '鍙繚鐣欐渶杩?N 澶╋紙0=鍏ㄩ儴锛?
         type: string
         default: '90'
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
-# 避免上一次未跑完时重复触发
-concurrency:
+# 閬垮厤涓婁竴娆℃湭璺戝畬鏃堕噸澶嶈Е鍙?concurrency:
   group: update-deals
   cancel-in-progress: false
 
@@ -33,6 +30,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -51,44 +51,36 @@ jobs:
 
       - name: Fetch, extract and build site
         env:
-          # 站点与域名配置（在仓库 Settings → Variables 中设置）
+          # 绔欑偣涓庡煙鍚嶉厤缃紙鍦ㄤ粨搴?Settings 鈫?Variables 涓缃紝鍙笉閰嶏級
           LDR_SITE_TITLE: ${{ vars.LDR_SITE_TITLE }}
           LDR_SITE_URL: ${{ vars.LDR_SITE_URL }}
           LDR_SITE_DESC: ${{ vars.LDR_SITE_DESC }}
           LDR_SITE_FOOTER: ${{ vars.LDR_SITE_FOOTER }}
-          # 抓取参数：手动触发时用输入值，定时触发时用默认值
-          WITH_REPLIES: ${{ github.event.inputs.with_replies || '1' }}
+          # 鎶撳彇鍙傛暟锛氭墜鍔ㄨЕ鍙戞椂鐢ㄨ緭鍏ュ€硷紝瀹氭椂瑙﹀彂鏃剁敤榛樿鍊?          WITH_REPLIES: ${{ github.event.inputs.with_replies || '1' }}
           RECENT_DAYS: ${{ github.event.inputs.recent_days || '90' }}
           PYTHON: python
         run: bash deploy/run_pipeline.sh
 
       - name: Verify output is non-empty
-        # 安全网：抓取失败或全部被过滤时，拒绝提交，保留上次线上数据
-        run: |
+        # 瀹夊叏缃戯細鎶撳彇澶辫触鎴栧叏閮ㄨ杩囨护鏃讹紝鎷掔粷鎻愪氦锛屼繚鐣欎笂娆＄嚎涓婃暟鎹?        run: |
           COUNT=$(python -c "import json;print(json.load(open('data/deals.json'))['count'])")
-          echo "记录数: $COUNT"
+          echo "璁板綍鏁? $COUNT"
           if [ "$COUNT" -lt 1 ]; then
-            echo "::error::记录数为 0，拒绝提交（保留上次数据）"
+            echo "::error::璁板綍鏁颁负 0锛屾嫆缁濇彁浜わ紙淇濈暀涓婃鏁版嵁锛?
             exit 1
           fi
 
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: site-${{ github.run_number }}
           path: site/
-          retention-days: 7
-          if-no-files-found: error
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Post to forum
-        # 把优惠帖搬运到 LowSeek 论坛。
-        #
-        # 默认关闭：LDR_FORUM_ENABLED 未设置时该步骤只打印「已关闭」并退出，
-        # 不会发布任何内容。想开启时在仓库 Variables 里设：
-        #   LDR_FORUM_ENABLED = true
-        #   LDR_FORUM_DRY_RUN = false   （先设 true 可只看演练日志）
-        # 并在 Secrets 里配置 LDR_FORUM_API_KEY。
-        env:
+        # 鎼繍浼樻儬甯栧埌 Flarum 璁哄潧銆傞粯璁ゅ叧闂紝涓嶉厤缃氨鏄彧鎵撳嵃銆屽凡鍏抽棴銆嶃€?        env:
           LDR_FORUM_ENABLED: ${{ vars.LDR_FORUM_ENABLED || 'false' }}
           LDR_FORUM_DRY_RUN: ${{ vars.LDR_FORUM_DRY_RUN || 'true' }}
           LDR_FORUM_API_KEY: ${{ secrets.LDR_FORUM_API_KEY }}
@@ -97,7 +89,7 @@ jobs:
           LDR_FORUM_MAX_PER_RUN: ${{ vars.LDR_FORUM_MAX_PER_RUN || '3' }}
           LDR_FORUM_MAX_AGE_DAYS: ${{ vars.LDR_FORUM_MAX_AGE_DAYS || '3' }}
           LDR_FORUM_MIN_PERCENT: ${{ vars.LDR_FORUM_MIN_PERCENT || '30' }}
-        # 读上一步生成的 deals.json，不重复抓取
+        # 璇讳笂涓€姝ョ敓鎴愮殑 deals.json锛屼笉閲嶅鎶撳彇
         run: python -m letdeals --forum-only
 
       - name: Commit refreshed data
@@ -105,10 +97,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # forum_posted.json 是幂等依据，必须提交；但它只在真正发过帖时
-          # 才存在。文件不存在时若直接 git add 会报
-          # "pathspec did not match"，因此先判断再添加。
-          add_all() {
+          # forum_posted.json 鏄箓绛変緷鎹紝蹇呴』鎻愪氦锛涗絾瀹冨彧鍦ㄧ湡姝ｅ彂杩囧笘鏃?          # 鎵嶅瓨鍦ㄣ€傛枃浠朵笉瀛樺湪鏃惰嫢鐩存帴 git add 浼氭姤
+          # "pathspec did not match"锛屽洜姝ゅ厛鍒ゆ柇鍐嶆坊鍔犮€?          add_all() {
             git add data/deals.json data/deals.md site/
             if [ -f data/forum_posted.json ]; then
               git add data/forum_posted.json
@@ -117,44 +107,18 @@ jobs:
 
           add_all
           if git diff --staged --quiet; then
-            echo "无变化，跳过提交"
+            echo "鏃犲彉鍖栵紝璺宠繃鎻愪氦"
             exit 0
           fi
           git commit -m "chore: refresh deals [skip ci]"
 
-          # 远端可能已被另一次运行推进（手动重跑、cron 延迟等），
-          # 直接 push 会因非快进而被拒。做法：把 HEAD 移到远端最新提交，
-          # 保留我们刚生成的数据（这些是产物，永远以最新一次为准），
-          # 在其之上重新提交，从而始终是快进推送。
-          git fetch origin main
+          # 杩滅鍙兘宸茶鍙︿竴娆¤繍琛屾帹杩涳紙鎵嬪姩閲嶈窇銆乧ron 寤惰繜绛夛級锛?          # 鐩存帴 push 浼氬洜闈炲揩杩涜€岃鎷掋€傚仛娉曪細鎶?HEAD 绉诲埌杩滅鏈€鏂版彁浜わ紝
+          # 淇濈暀鎴戜滑鍒氱敓鎴愮殑鏁版嵁锛堣繖浜涙槸浜х墿锛屾案杩滀互鏈€鏂颁竴娆′负鍑嗭級锛?          # 鍦ㄥ叾涔嬩笂閲嶆柊鎻愪氦锛屼粠鑰屽缁堟槸蹇繘鎺ㄩ€併€?          git fetch origin main
           git reset --soft origin/main
           add_all
           if git diff --staged --quiet; then
-            echo "与远端一致，无需提交"
+            echo "涓庤繙绔竴鑷达紝鏃犻渶鎻愪氦"
           else
             git commit -m "chore: refresh deals [skip ci]"
           fi
           git push
-
-      # 可选：推送到自有服务器（配置 LDR_DEPLOY_HOST 后自动启用）
-      - name: Deploy to own server
-        if: ${{ vars.LDR_DEPLOY_HOST != '' }}
-        env:
-          SSH_KEY: ${{ secrets.LDR_DEPLOY_SSH_KEY }}
-          HOST: ${{ vars.LDR_DEPLOY_HOST }}
-          USER: ${{ vars.LDR_DEPLOY_USER }}
-          TARGET: ${{ vars.LDR_DEPLOY_PATH }}
-          PORT: ${{ vars.LDR_DEPLOY_PORT || '22' }}
-        run: |
-          if [ -z "$SSH_KEY" ]; then
-            echo "::warning::未配置 LDR_DEPLOY_SSH_KEY，跳过部署"
-            exit 0
-          fi
-          mkdir -p ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          # 首次连接自动接受主机指纹；更高安全性可改为预置 known_hosts
-          ssh-keyscan -p "$PORT" -H "$HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
-          rsync -avz --delete -e "ssh -i ~/.ssh/deploy_key -p $PORT" \
-            site/ "$USER@$HOST:$TARGET/"
-          echo "已推送到 $USER@$HOST:$TARGET"
